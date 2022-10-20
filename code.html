@@ -146,9 +146,35 @@
         </div>
         <!-- Code Docs -->
         <div class="col-12 col-lg-4">
-          <p>The code is structured in one function</p>
-          <h5>displayMessage</h5>
-          <p>Prints out the message</p>
+          <p>
+            The javascript code for RaceCaR is structured in three functions:
+            palindrome(), checkPalindrome(), and displayString().
+          </p>
+          <h5>palindrome()</h5>
+          <p>
+            This is the entry point to our app, which is called via
+            EventListener on click of the 'Reverse' button. palindrome()
+            verifies that a string was input via if statement, imports the
+            validated string, and then calls both <b>checkPalindrome()</b> and
+            <b>displayString()</b>.
+          </p>
+          <h5>checkpalindrome()</h5>
+          <p>
+            This second function cleans the user input string by standardizing
+            the string to lowercase letters and making it a regular expression.
+            It then reverses the string and checks to see if the string is a
+            palindrome by comparing the validated string 'userString' to the
+            reversed string 'revString' The reversed string is placed into
+            'returnObj' for output in the <b>displayString()</b> function below.
+          </p>
+          <h5>displayString()</h5>
+          <p>
+            Finally, this function takes the reversed string which was passed
+            along from
+            <b>checkPalindrome()</b> in 'returnObj' and styles it before
+            returning it in a color-coded alert in the results section of the
+            page.
+          </p>
         </div>
       </div>
     </main>

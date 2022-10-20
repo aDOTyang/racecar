@@ -51,18 +51,18 @@ function checkPalindrome(userString) {
 //   return revString;
 // }
 
-// quick reverse string fn with JS
-// function ReverseStringJS(userString) {
-//   // 'split' turns user input string into array
-//   let userArray = userString.split("");
-//   // 'reverse' only works on arrays
-//   let revArray = userArray.reverse(userArray);
-//   // 'join' returns the array to a string
-//   let revString = revArray.join("");
+/* quick reverse string fn with JS
+function ReverseStringJS(userString) {
+  // 'split' turns user input string into array
+  let userArray = userString.split("");
+  // 'reverse' only works on arrays
+  let revArray = userArray.reverse(userArray);
+  // 'join' returns the array to a string
+  let revString = revArray.join("");
 
-//   // lets revString be seen outside of the ReverseStringJS function
-//   return revString;
-// }
+  // lets revString be seen outside of the ReverseStringJS function
+  return revString;
+} */
 
 // display the string
 function displayString(returnObj) {
