@@ -35,7 +35,7 @@
       <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
         <div class="container">
           <a class="navbar-brand" href="/index.html"
-            ><img src="/img/ALEXdark.png" height="50" class="p-1" />Rewind</a
+            ><img src="/img/ALEXdark.png" height="50" class="p-1" />RacecaR</a
           >
           <button
             class="navbar-toggler"
@@ -88,27 +88,59 @@
         <div class="col-12 col-lg-8">
           <pre class="line-numbers">
                     <code class="language-js">
-                      function getValues() {
+                      function palindrome() {
                         document.getElementById("alert").classList.add("invisible");
-                      
                         let userString = document.getElementById("userString").value;
-                        let revString = ReverseAString(userString);
                       
-                        displayString(revString);}
+                        if (userString == "") {
+                          Swal.fire({
+                            icon: "error",
+                            backdrop: false,
+                            title: "RacecaR",
+                            text: "You jumped the light! No input detected.",
+                          });
+                        } else {
                       
-                      function ReverseAString(userString) {
+                          let returnObj = checkPalindrome(userString);
+                          displayString(returnObj); }
+                      }
+                      
+                      function checkPalindrome(userString) {
+                        userString = userString.toLowerCase();
+                        const regex = /[^a-z0-9]/gi;
+                        userString = userString.replace(regex, "");
+                      
                         let revString = [];
+                        let returnObj = {};
                       
                         for (let index = userString.length - 1; index >= 0; index--) {
-                          revString += userString[index];}
-                        return revString;}
+                          revString += userString[index]; }
                       
-                      function displayString(revString) {
-                        document.getElementById(
-                          "msg"
-                        ).innerHTML = `Your string reversed is: <strong><h4>${revString}</h4></strong>`;
+                        if (userString == revString) {
+                          returnObj.msg = "Yes! This is a palindrome!";
+                        } else {
+                          returnObj.msg = "No! Not a palindrome!"; }
+                        returnObj.reversed = revString;
+                        return returnObj; }
+
+                      function displayString(returnObj) {
+                        let palAlert = document.getElementById("alert");
+                        let alertHdr = document.getElementById("alertHeader");
                       
-                        document.getElementById("alert").classList.remove("invisible");}
+                        if (returnObj.msg.includes("Not")) {
+                          palAlert.classList.remove("alert-success");
+                          palAlert.classList.add("alert-danger");
+                        } else {
+                          palAlert.classList.remove("alert-danger");
+                          palAlert.classList.add("alert-success");
+                        }
+                      
+                        alertHdr.innerHTML = returnObj.msg;
+                      
+                        document.getElementById("msg").innerHTML =
+                        `Your string reversed is: ${returnObj.reversed}`;
+                      
+                        palAlert.classList.remove("invisible"); }
                       </code>
                 </pre>
         </div>
