@@ -34,7 +34,7 @@ a        aa<!DOCTYPE html>
       <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="mainNav">
         <div class="container">
           <a class="navbar-brand" href="/index.html"
-            ><img src="/img/ALEXdark.png" height="50" class="p-1" />RacecaR</a
+            ><img src="/img/ALEXdark.png" height="50" class="p-1" />dniweR</a
           >
           <button
             class="navbar-toggler"
@@ -62,7 +62,7 @@ a        aa<!DOCTYPE html>
                 <a class="nav-link" href="/code.html">The Code</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://github.com/aDOTyang/racecar"
+                <a class="nav-link" href="https://github.com/aDOTyang/Rewind"
                   >The Repo</a
                 >
               </li>
@@ -85,12 +85,11 @@ a        aa<!DOCTYPE html>
         <div class="col border-end border-2">
           <div class="fw-bold lh-1 mb-3">
             <p>
-              Race to the end! A Javascript coding exercise using loops to write
-              a program that checks if a string is a palindrome.
+              Rewind! A Javascript coding exercise using a decrementing for loop
+              to write a program that reverses an input string.
             </p>
             <h2 class="border-bottom border-2">Instructions</h2>
-            Enter a word to check. Press the button and the RacecaR will do all
-            the work!
+            Enter a string to reverse. Press the button and Rewind!
           </div>
         </div>
         <div class="col">
@@ -116,8 +115,8 @@ a        aa<!DOCTYPE html>
               </div>
             </form>
             <h2 class="mt-5 border-bottom border-2">Results</h2>
-            <div class="alert mt-5 invisible fade show" id="alert" role="alert">
-              <h4 class="alert-heading" id="alertHeader">Ka-chow!</h4>
+            <div class="alert invisible fade show" id="alert" role="alert">
+              <h4 class="alert-heading" id="alertHeader">WoW!</h4>
               <hr />
               <p class="mb-0" id="msg"></p>
             </div>
@@ -162,9 +161,7 @@ a        aa<!DOCTYPE html>
 
     <!-- Document refers to the page to which the html is currently attached [DOM: Document Object Model] -->
     <script>
-      document
-        .getElementById("btnSubmit")
-        .addEventListener("click", palindrome);
+      document.getElementById("btnSubmit").addEventListener("click", getValues);
     </script>
   </body>
 </html>
